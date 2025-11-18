@@ -85,11 +85,26 @@ Its architecture allows it to function as a system assistant, diagnostic agent, 
 ## Core Features
 
 ### Local Execution
-**Echo can**
+**Echo can currently do anything you can do in powershell or a command prompt**
 - *Run command-line operations*
+- *Store memory locally and inject context on startup.*
 - *Execute PowerShell scripts*
 - *Run inline Python (3.11+)*
 - *Parse results and act on them*
+- *Inspect running processes*
+- *Diagnose performance issues*
+- *Read and interpret system logs*
+- *Restart or terminate processes*
+- *Collect telemetry and system metrics*
+- *Fetching system hardware information*  
+- *Recording CPU/GPU specifications*  
+- *Diagnosing network failures*  
+- *Parsing and interpreting command output* 
+- *Running traceroutes, pings, and monitoring connectivity*  
+- *Executing embedded Python analysis scripts*  
+- *Automatically learning correct commands after failure*
+- *Maintaining session-level and persistent long-term context*
+- ***Much more***
 
 ### Persistent Memory Model
 Echo maintains four memory types:
@@ -106,39 +121,19 @@ Echo maintains four memory types:
 **Objectives**  
 *Long-term or multi-step tasks that may span multiple sessions.*
 
-All memory is stored locally and reloaded on startup.
 
-### Autonomous Operation
 **Echo can function without user input.  
-When idle, it may**
-- *Inspect system health*
-- *Analyze logs*
-- *Monitor performance metrics*
-- *Continue incomplete objectives*
-- *Improve its own capabilities*
-
-### Tooling and System Insight
-**Echo can**
-- *Query hardware and drivers*
-- *Inspect running processes*
-- *Diagnose performance issues*
-- *Read and interpret system logs*
-- *Restart or terminate processes*
-- *Collect telemetry and system metrics*
-- *Identify network connectivity issues*
+When idle, it may try to achieve saved goals**
 
 ---
 
 ## Planned Capabilities
-
-- *Fetching system hardware information*  
-- *Recording CPU/GPU specifications*  
-- *Diagnosing network failures*  
-- *Parsing and interpreting command output* 
-- *Running traceroutes, pings, and monitoring connectivity*  
-- *Executing embedded Python analysis scripts*  
-- *Automatically learning correct commands after failure*
-- *Maintaining session-level and persistent long-term context*
+**Features and fixes we plan to add soon**
+- *Giving Echo more information to process*
+  - *Microphone listening*
+  - *Screenshots every 1-1000ms*
+  - *Easy internet search for smaller models*
+  - *Log keystrokes*
 - *Acting as a software build and automation assistant*
   - *Building a rust application*
   - *Building a c++ application*  
@@ -158,6 +153,7 @@ When idle, it may**
 **Every Echo response ends with a structured metadata block**
 
 [CurrentObjective<...>,
+
 StoreCurrentObjective<true|false>,
 Note<...>,
 Learn<...>,
@@ -169,11 +165,17 @@ Think<true|false>,
 State<...>]
 
 **This metadata instructs the host controller what to do next**
-- *What to run*
-- *What to store*
-- *What to learn*
-- *Whether to reflect*
-- *Whether to continue autonomously*
+- *CurrentObjective<string> - What it plans on doing. Example: CurrentObjective<Figure out how to get the time in japan for the user> (user asked for the time in japan and you want to get it for them)*
+- *StoreCurrentObjective<bool> - Stores an objective file as a core component of what it plans to do (long term). Only stores VERY important goals that may take more than 5 prompts to complete. Example: StoreCurrentObjective<true>*
+- *Note<string> - Stores a note file that is saved to its memory forever. If the user gives any information such as their name, computer specs, interest, goals, ect to the model should it save it. Example: Note<User's Gpu is a 4090> (notes the users graphics card)*
+- *Learn<string> - Stores a learned file that is also saved to the models memory forever. Example: Learn<How to find any countries time with cmd: curl https://worldtimeapi.org/api/timezone/Asia/Tokyo>*
+- *Run_Command<string> - Runs a command in the console. Example: Run_Command<echo example command call>*
+- *Run_Python<string> - Runs a python script using python 3.11.9. Example: Run_Python<print("Test")>*
+- *Run_Powershell<string> - Runs a powershell script. Example:<Invoke-WebRequest -Uri "http://worldtimeapi.org/api/timezone/Asia/Tokyo" | ConvertFrom-Json | Select-Object datetime>*
+- *Think<bool> - If the model does not recieve any input from the user, the model will use this tag to do some work on its own. Example: Think<true> (will work on current objective or generate a new objective if one is not present)*
+- *Reflect<string> - Short-term adaptive memory separate from "Learn" or "Note" like a debugging journal. Example: Reflect<User did not want curl output, needs just the time string>*
+- *State<string> - Current model state. Examples: State<idle>,State<working>,State<blocked: need admin>,State<blocked: missing info>,State<complete>,State<error>,State<waiting for user>,State<executing>,State<thinking>*
+
 
 ---
 
