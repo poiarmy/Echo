@@ -10,6 +10,14 @@ Echo integrates directly with the operating system, allowing it to execute comma
 
 Echo runs entirely on your hardware, with no external dependencies, no telemetry, and no remote API calls.
 
+There is no ETA on a release.
+Currently, this repository will act as a "good read" into the consequences of bringing AI and un-restricted access together.
+
+We plan on adding a constant visual input in the future as well. Perhaps taking a screenshot every 1-1000ms and using a model that can process
+images.
+
+THIS PROJECT WILL NEVER BE FOR SALE OR COME FROM ANY SOURCE BUT HERE
+DO NOT TRUST ANYONE SELLING ECHO OR AN ECHO MODEL
 ---
 ## Security Notice
 Echo is a local system-level AI agent capable of executing commands, accessing files, and interacting with sensitive information. While this design provides powerful capabilities, it also introduces security considerations that must be taken seriously.
