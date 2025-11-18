@@ -28,17 +28,6 @@ images.
 - *RAM: 64.0 GB*
 - *Storage: SSD - 4 TB*
 
-
-
-
-
-Display (1): Samsung LS32CG51x
-Resolution: 2560 x 1440 (native)
-Refresh rate: 165 Hz
-Desktop color depth: Highest (32-bit)
-Display technology: Variable Refresh Rate
-HDCP: Supported
-
 ---
 ## Security Notice
 Echo is a local system-level AI agent capable of executing commands, accessing files, and interacting with sensitive information. While this design provides powerful capabilities, it also introduces security considerations that must be taken seriously.
