@@ -1,5 +1,5 @@
 ![image](image.png)
-above is a proof-of-concept of Echo and the private Echo model finding the correct time of japan and learning the command to use in the future.
+Above is a proof-of-concept of Echo and the private Echo model finding the correct time of Japan and learning the command to use in the future.
 Echo also reflects on how the action went and what results it has achieved.
 
 # Echo — A Local, Autonomous System-Level AI Agent
