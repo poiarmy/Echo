@@ -165,9 +165,9 @@ Think<true|false>,
 State<...>]
 
 **This metadata instructs the host controller what to do next**
-- *CurrentObjective<string> - What it plans on doing. Example: CurrentObjective<Figure out how to get the time in japan for the user> (user asked for the time in japan and you want to get it for them)*
+- *CurrentObjective<string> - What it plans on doing. Example: CurrentObjective<Figure out how to get the time in japan for the user>*
 - *StoreCurrentObjective<bool> - Stores an objective file as a core component of what it plans to do (long term). Only stores VERY important goals that may take more than 5 prompts to complete. Example: StoreCurrentObjective<true>*
-- *Note<string> - Stores a note file that is saved to its memory forever. If the user gives any information such as their name, computer specs, interest, goals, ect to the model should it save it. Example: Note<User's Gpu is a 4090> (notes the users graphics card)*
+- *Note<string> - Stores a note file that is saved to its memory forever. If the user gives any information such as their name, computer specs, interest, goals, ect to the model should it save it. Example: Note<User's Gpu is a 4090>*
 - *Learn<string> - Stores a learned file that is also saved to the models memory forever. Example: Learn<How to find any countries time with cmd: curl https://worldtimeapi.org/api/timezone/Asia/Tokyo>*
 - *Run_Command<string> - Runs a command in the console. Example: Run_Command<echo example command call>*
 - *Run_Python<string> - Runs a python script using python 3.11.9. Example: Run_Python<print("Test")>*
