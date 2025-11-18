@@ -13,7 +13,8 @@ Echo runs entirely on your hardware, with no external dependencies, no telemetry
 Echo is a local system-level AI agent capable of executing commands, accessing files, and interacting with sensitive information. While this design provides powerful capabilities, it also introduces security considerations that must be taken seriously.
 
 Model alignment and trust are your responsibility.
-Echo does not enforce moral, ethical, or safety constraints — by design. This means:
+Echo does not enforce moral, ethical, or safety constraints by design. 
+This means:
 - If you use an untrusted model, it may attempt to deceive you.
 - If prompted, an unrestricted model may attempt harmful or manipulative behavior.
 - Echo will execute code the model requests unless you intervene.
