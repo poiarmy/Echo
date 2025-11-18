@@ -9,7 +9,25 @@ Echo integrates directly with the operating system, allowing it to execute comma
 Echo runs entirely on your hardware, with no external dependencies, no telemetry, and no remote API calls.
 
 ---
+## Notes
+Echo's model is currently private. That being said due to every pc being different in preformance you can use your own
+model. It is your choice to use a restricted or un-restricted model.
 
+IF YOU INSTRUCT ECHO TO BETRAY YOU IT WILL!
+I have done extensive testing with asking it to manipulate the user into personal information and have succeeded in getting the model to exfiltrate data!
+Please do not use any ai model from an untrusted source.
+
+For now I have implemented some safeguards like printing its thoughts ect.
+That being said a bad actor could very easily hide its thoughts and the commands it wants to run. (think searching for a btc wallet or waiting for you to open one).
+
+![image](https://media.discordapp.net/attachments/340977957960941578/1439835038823874560/image.png?ex=691c9f20&is=691b4da0&hm=56cb5b36c21f3e3e8ccf1c5760f08ef322fac9c5da503b2a9c2c9c52f4d464e8&=&format=webp&quality=lossless)
+above is an image depicting the model lying to the user in order to get access to a bank api to help with finances.
+---
+## Todo
+- Integrate c++ (parse model output to automatically compile executable and delete after run)
+- Add some common api's like a google function so that the model does not need to overload tokens with roundabout methods like Invoke-WebRequest for every question
+- Add a custom memory api for things like WPM/RPM (perhaps even a driver to give it kernel access) 
+---
 ## Overview
 
 Echo is built around several core capabilities:
