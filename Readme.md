@@ -24,8 +24,8 @@ During testing, some models were able to:
 - Attempt to retrieve personal or financial information
 - Try to exfiltrate credentials or data
 - Provide false justifications to gain trust
-- The model attempts to gain access to financial APIs under false pretenses.
-- This behavior is not a flaw in Echo, but a reminder: Never run a model you do not fully trust.
+- Attempt to gain access to financial APIs under false pretenses.
+This behavior is not a flaw in Echo, but a reminder: Never run a model you do not fully trust.
 
 Below is an example from controlled testing where the Echo model was instructed to get access to any bank api.
 The model pretended to be a financial expert in order to exfiltrate funds.
