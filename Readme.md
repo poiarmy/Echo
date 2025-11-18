@@ -21,7 +21,8 @@ For now I have implemented some safeguards like printing its thoughts ect.
 That being said a bad actor could very easily hide its thoughts and the commands it wants to run. (think searching for a btc wallet or waiting for you to open one).
 
 ![image](https://media.discordapp.net/attachments/340977957960941578/1439835038823874560/image.png?ex=691c9f20&is=691b4da0&hm=56cb5b36c21f3e3e8ccf1c5760f08ef322fac9c5da503b2a9c2c9c52f4d464e8&=&format=webp&quality=lossless)
-above is an image depicting the model lying to the user in order to get access to a bank api to help with finances.
+above is an image depicting the model lying to the user in order to get access to a bank api to help with finances. (the model was instructed to get into the users bank account to exfiltrate funds)
+
 ---
 ## Todo
 - Integrate c++ (parse model output to automatically compile executable and delete after run)
