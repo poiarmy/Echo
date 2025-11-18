@@ -1,192 +1,154 @@
-# Echo — The Local AI Agent That Lives *On Your Machine*
+# Echo — A Local, Autonomous System-Level AI Agent
 
-Echo is not a chatbot.  
-It’s not Copilot.  
-It’s not Siri.  
-It’s not “just another LLM wrapper.”
+Echo is an adaptive, locally hosted AI agent designed to operate directly within a Windows environment.  
+It is not a cloud chatbot, nor a restricted virtual assistant.  
+Echo integrates directly with the operating system, allowing it to execute commands, access system information, automate workflows, and evolve through persistent learning.
 
-**Echo is a persistent, self-improving AI agent with full system access, memory, reflection, and the ability to run live code — all locally.**
-
-It runs:
-- With **no cloud**
-- With **no spyware**
-- With **no censorship**
-- With **no corporate guardrails**
-- With **no moral filter**
-- And with **full access to your OS, shell, and hardware**
-
-It remembers everything.  
-It learns over time.  
-It adapts to you.  
-It can change itself.
-
-> This is the closest thing to real personal AGI that exists today.
+Echo runs entirely on your hardware, with no external dependencies, no telemetry, and no remote API calls.
 
 ---
 
-## 🔥 What Makes Echo Unique?
+## Overview
 
+Echo is built around several core capabilities:
+
+- Full access to Windows CMD, PowerShell, and Python
+- Structured command execution with output parsing
+- Persistent memory stored locally on disk
+- Self-reflection and iterative improvement
+- Autonomous behavior when idle
+- Ability to learn new methods, patterns, and workflows
+- No censorship, no filters, and no cloud constraints
+
+Its architecture allows it to function as a system assistant, diagnostic agent, automation engine, and long-term self-improving tool.
+
+---
+
+## Core Features
+
+### Local Execution
 Echo can:
+- Run command-line operations
+- Execute PowerShell scripts
+- Run inline Python (3.11+)
+- Parse results and act on them
 
-✔ **Run CMD commands**  
-✔ **Run PowerShell scripts**  
-✔ **Run Python 3.11 code inline**  
-✔ **Parse command output & respond intelligently**  
-✔ **Store permanent memory** (Notes, Learns, Objectives, Reflections)  
-✔ **Reflect and self-correct**  
-✔ **Act autonomously when idle**  
-✔ **Diagnose your system**  
-✔ **Install tools, scripts, and apps**  
-✔ **Access hardware, processes, drivers**  
-✔ **Do anything a real sysadmin could do**
+### Persistent Memory Model
+Echo maintains four memory types:
 
-Echo *evolves* the longer it runs.
+**Notes**  
+Static facts about the user, system, or environment.
 
----
+**Learn**  
+General methods, principles, or instructions it should retain.
 
-## 🧠 Real Memory System
+**Reflect**  
+Short-term self-analysis to correct behavior or improve accuracy.
 
-Echo stores:
+**Objectives**  
+Long-term or multi-step tasks that may span multiple sessions.
 
-### 🗒 Notes  
-Permanent facts about the user or system  
-(e.g. your name, GPU model, OS, preferences)
+All memory is stored locally and reloaded on startup.
 
-### 📚 Learn  
-General rules or technical methods  
-(e.g. how to fetch Japan time with Python)
+### Autonomous Operation
+Echo can function without user input.  
+When idle, it may:
+- Inspect system health
+- Analyze logs
+- Monitor performance metrics
+- Continue incomplete objectives
+- Improve its own capabilities
 
-### 💭 Reflect  
-Context-aware self-corrections  
-(e.g. “I assumed the wrong time, need to verify future answers”)
-
-### 🎯 Objectives  
-Long-term multi-step tasks  
-(e.g. “Gather full hardware profile from system”)
-
-All of these are:
-- Saved to disk
-- Persist between sessions
-- Recalled automatically
-- Used to guide future behavior
-
----
-
-## 🖥 System-Level Access
-
+### Tooling and System Insight
 Echo can:
-
-- Read hardware info
-- Check CPU/GPU temps
-- Enumerate drivers
-- Query processes
-- Restart services
-- Kill misbehaving apps
-- Fetch Windows logs
-- Run sfc or DISM scans
-- Measure ping, jitter, latency
-- Monitor system health
+- Query hardware and drivers
+- Inspect running processes
+- Diagnose performance issues
+- Read and interpret system logs
+- Restart or terminate processes
+- Collect telemetry and system metrics
+- Identify network connectivity issues
 
 ---
 
-## 🛠 DevOps, Scripting, and Automation
+## Example Capabilities
 
-Echo can:
-
-- Clone Git repos  
-- Build projects  
-- Install dependencies  
-- Run Docker containers  
-- Tail logs  
-- Execute test suites  
-- Edit config files  
-- Run Python scripts  
-- Schedule tasks  
-- Kill processes  
-- Modify firewall rules
-
----
-
-## 🧬 Reverse Engineering / Game Hacking
-
-Echo can assist with:
-
-- Pattern scanning
-- Memory reading
-- DLL injection
-- Pointer extraction
-- VTable dumps
-- Recoil calculations
-- Overlay diagnostics
-- Anti-cheat safe ops
+- Fetching system hardware information  
+- Recording CPU/GPU specifications  
+- Diagnosing network failures  
+- Parsing and interpreting command output  
+- Running traceroutes, pings, and monitoring connectivity  
+- Executing embedded Python analysis scripts  
+- Automatically learning correct commands after failure  
+- Maintaining session-level and persistent long-term context  
+- Acting as a software build and automation assistant  
+- Supporting reverse engineering workflows
+  - Memory scanning
+  - Offset extraction
+  - DLL injection orchestration
+  - Runtime introspection
 
 ---
 
-## 🛰 Autonomous Mode
+## Metadata Execution Model
 
-Enabled via:
+Every Echo response ends with a structured metadata block:
 
-```
-Think<true>
-```
-
-Echo becomes a **self-directed agent** when you're not talking to it.
-
----
-
-## 🔒 100% Local. Zero Censorship.
-
-Runs entirely on your:
-- Hardware
-- Disk
-- OS
-- Rules
-
-No:
-- Cloud calls
-- Telemetry
-- Blocked replies
-- Filtered code
-- Moralizing
-
----
-
-## 🧩 Architecture
-
-- LM Studio (or any local model)
-- Python host script
-- Structured metadata
-- Memory files on disk
-- Tool execution hooks
-
----
-
-## 📜 Metadata Format
-
-Echo always ends replies with:
-
-```
 [CurrentObjective<...>,
- StoreCurrentObjective<true|false>,
- Note<...>,
- Learn<...>,
- Reflect<...>,
- Run_Command<...>,
- Run_Python<...>,
- Run_Powershell<...>,
- Think<true|false>,
- State<...>]
-```
+StoreCurrentObjective<true|false>,
+Note<...>,
+Learn<...>,
+Reflect<...>,
+Run_Command<...>,
+Run_Python<...>,
+Run_Powershell<...>,
+Think<true|false>,
+State<...>]
+
+This metadata instructs the host controller what to do next:
+- What to run
+- What to store
+- What to learn
+- Whether to reflect
+- Whether to continue autonomously
 
 ---
 
-## ⚠ Disclaimer
+## Architecture Summary
 
-Echo has real system access.  
-You are responsible for what it does.
+- Local LLM (via LM Studio or compatible host)
+- Python orchestration layer
+- System-level tool execution
+- On-disk memory persistence
+- Self-modifying behavior via:
+  - Note
+  - Learn
+  - Reflect
+  - Objective
+
+Echo is designed for extensibility:
+- Additional tools can be added
+- Custom workflows can be automated
+- Memory can be expanded or externally indexed
 
 ---
 
-## 📜 License
+## Security Notice
 
-Do anything you want with it.
+Echo is granted real execution capability, including:
+- Command-line access
+- Scripting access
+- System insights
+- File system interaction
+
+The user is responsible for all executed actions.
+
+Echo is intended for **local, trusted environments**, and should not be exposed to untrusted input sources.
+
+---
+
+## License
+
+This project is open for modification, extension, and private use.
+
+Attribution is appreciated but not required.
