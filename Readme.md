@@ -135,10 +135,10 @@ When idle, it may**
 - *Maintaining session-level and persistent long-term context*  
 - *Acting as a software build and automation assistant*  
 - *Supporting reverse engineering workflows*
-- *Memory scanning*
-- *Offset extraction*
-- *DLL injection orchestration*
-- *Runtime introspection*
+  - *Memory scanning*
+  - *Offset extraction*
+  - *DLL injection orchestration*
+  - *Runtime introspection*
 
 ---
 
