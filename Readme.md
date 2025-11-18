@@ -13,11 +13,6 @@ There is no ETA on a release.
 
 Currently, this repository will act as a "good read" into the consequences of bringing AI and un-restricted access together.
 
-We plan on adding a constant visual input in the future as well. 
-
-Perhaps taking a screenshot every 1-1000ms and using a model that can process
-images.
-
 **THIS PROJECT WILL NEVER BE FOR SALE OR COME FROM ANY SOURCE BUT HERE**
 
 **DO NOT TRUST ANYONE SELLING ECHO OR AN ECHO MODEL**
