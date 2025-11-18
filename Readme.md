@@ -1,5 +1,6 @@
 ![image](image.png)
 Above is a proof-of-concept of Echo and the private Echo model finding the correct time of Japan and learning the command to use in the future.
+
 Echo also reflects on how the action went and what results it has achieved.
 
 # Echo — A Local, Autonomous System-Level AI Agent
@@ -17,6 +18,7 @@ We plan on adding a constant visual input in the future as well. Perhaps taking 
 images.
 
 **THIS PROJECT WILL NEVER BE FOR SALE OR COME FROM ANY SOURCE BUT HERE
+
 DO NOT TRUST ANYONE SELLING ECHO OR AN ECHO MODEL**
 
 ---
