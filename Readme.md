@@ -1,3 +1,5 @@
+![image](image.png)
+
 # Echo — A Local, Autonomous System-Level AI Agent
 
 Echo is an adaptive, locally hosted AI agent designed to operate directly within a Windows environment.  
