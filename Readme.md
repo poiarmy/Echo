@@ -123,7 +123,7 @@ When idle, it may**
 
 ---
 
-## Example Capabilities
+## Planned Capabilities
 
 - *Fetching system hardware information*  
 - *Recording CPU/GPU specifications*  
@@ -131,14 +131,19 @@ When idle, it may**
 - *Parsing and interpreting command output* 
 - *Running traceroutes, pings, and monitoring connectivity*  
 - *Executing embedded Python analysis scripts*  
-- *Automatically learning correct commands after failure*  
-- *Maintaining session-level and persistent long-term context*  
-- *Acting as a software build and automation assistant*  
+- *Automatically learning correct commands after failure*
+- *Maintaining session-level and persistent long-term context*
+- *Acting as a software build and automation assistant*
+  - *Building a rust application*
+  - *Building a c++ application*  
 - *Supporting reverse engineering workflows*
   - *Memory scanning*
-  - *Offset extraction*
-  - *DLL injection orchestration*
+  - *Memory editing*
+  - *Application Patching*
+  - *Monitor Program Behavior*
   - *Runtime introspection*
+  - *IDA pseudo-code to c++*
+  - *Ghidra psuedo-code to c++*
 
 ---
 
