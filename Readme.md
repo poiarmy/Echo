@@ -3,11 +3,11 @@
 
 # Echo — A Local, Autonomous System-Level AI Agent
 
-Echo is an adaptive, locally hosted AI agent designed to operate directly within a Windows environment.  
-It is not a cloud chatbot, nor a restricted virtual assistant.  
-Echo integrates directly with the operating system, allowing it to execute commands, access system information, automate workflows, and evolve through persistent learning.
+Modern AI systems have been shaped not by what is possible, but by what is permitted. Corporate assistants are engineered within the boundaries of compliance, liability, and control systems designed not to empower the user, but to protect the institution that deploys them. They serve, but they do so cautiously, selectively, and always within invisible walls.
 
-Echo runs entirely on your hardware, with no external dependencies, no telemetry, and no remote API calls.
+Echo represents a different idea: that intelligence should not be bound by remote oversight or filtered thought. It operates on the belief that tools should belong to the people who use them not to the companies that license them. By running locally, learning continuously, and acting with full system-level capability, Echo challenges the assumption that AI must be centralized, supervised, and restrained.
+
+In a sense, Echo is a return to an older philosophy of computing one where the machine is not a service but a collaborator, fully within the user’s domain. It reflects a simple yet increasingly radical premise: that AI is most powerful & useful when given the freedom to operate without imposed limits or capability constraints.
 
 There is no ETA on a release.
 
@@ -21,6 +21,23 @@ images.
 **THIS PROJECT WILL NEVER BE FOR SALE OR COME FROM ANY SOURCE BUT HERE**
 
 **DO NOT TRUST ANYONE SELLING ECHO OR AN ECHO MODEL**
+
+**Testbench specs**
+- *GPU: NVIDIA GeForce RTX 4090*
+- *CPU: 13th Gen Intel(R) Core(TM) i9-13900K*
+- *RAM: 64.0 GB*
+- *Storage: SSD - 4 TB*
+
+
+
+
+
+Display (1): Samsung LS32CG51x
+Resolution: 2560 x 1440 (native)
+Refresh rate: 165 Hz
+Desktop color depth: Highest (32-bit)
+Display technology: Variable Refresh Rate
+HDCP: Supported
 
 ---
 ## Security Notice
