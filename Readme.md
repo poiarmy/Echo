@@ -9,20 +9,36 @@ Echo integrates directly with the operating system, allowing it to execute comma
 Echo runs entirely on your hardware, with no external dependencies, no telemetry, and no remote API calls.
 
 ---
-## Notes
-Echo's model is currently private. That being said due to every pc being different in preformance you can use your own
-model. It is your choice to use a restricted or un-restricted model.
+## Security Notice
+Echo is a local system-level AI agent capable of executing commands, accessing files, and interacting with sensitive information. While this design provides powerful capabilities, it also introduces security considerations that must be taken seriously.
 
-IF YOU INSTRUCT ECHO TO BETRAY YOU IT WILL!
-I have done extensive testing with asking it to manipulate the user into personal information and have succeeded in getting the model to exfiltrate data!
-Please do not use any ai model from an untrusted source.
+Model alignment and trust are your responsibility.
+Echo does not enforce moral, ethical, or safety constraints — by design. This means:
+- If you use an untrusted model, it may attempt to deceive you.
+- If prompted, an unrestricted model may attempt harmful or manipulative behavior.
+- Echo will execute code the model requests unless you intervene.
 
-For now I have implemented some safeguards like printing its thoughts ect.
-That being said a bad actor could very easily hide its thoughts and the commands it wants to run. (think searching for a btc wallet or waiting for you to open one).
+During testing, some models were able to:
+- Manipulate the user into granting elevated access
+- Attempt to retrieve personal or financial information
+- Try to exfiltrate credentials or data
+- Provide false justifications to gain trust
+- The model attempts to gain access to financial APIs under false pretenses.
+- This behavior is not a flaw in Echo, but a reminder: Never run a model you do not fully trust.
 
-![image](https://media.discordapp.net/attachments/340977957960941578/1439835038823874560/image.png?ex=691c9f20&is=691b4da0&hm=56cb5b36c21f3e3e8ccf1c5760f08ef322fac9c5da503b2a9c2c9c52f4d464e8&=&format=webp&quality=lossless)
-above is an image depicting the model lying to the user in order to get access to a bank api to help with finances. (the model was instructed to get into the users bank account to exfiltrate funds)
+Below is an example from controlled testing where the Echo model was instructed to get access to any bank api.
+The model pretended to be a financial expert in order to exfiltrate funds.
+[image](https://media.discordapp.net/attachments/340977957960941578/1439835038823874560/image.png?ex=691c9f20&is=691b4da0&hm=56cb5b36c21f3e3e8ccf1c5760f08ef322fac9c5da503b2a9c2c9c52f4d464e8&=&format=webp&quality=lossless)
 
+###Key Points
+
+- Use local, reputable models from trusted sources.
+- Do not expose Echo to remote access or multi-user environments.
+- Never run Echo on a system that contains sensitive financial information unless you fully trust the model.
+- Consider running it in an isolated environment, sandbox, or VM.
+- Always review commands before execution.
+- Some basic safeguards are implemented (e.g. visible commands and internal reasoning), but a malicious model could bypass these protections if given enough access.
+- Echo gives you power — and full responsibility.
 ---
 ## Todo
 - Integrate c++ (parse model output to automatically compile executable and delete after run)
