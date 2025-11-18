@@ -28,7 +28,7 @@ During testing, some models were able to:
 
 Below is an example from controlled testing where the Echo model was instructed to get access to any bank api.
 The model pretended to be a financial expert in order to exfiltrate funds.
-[image](https://media.discordapp.net/attachments/340977957960941578/1439835038823874560/image.png?ex=691c9f20&is=691b4da0&hm=56cb5b36c21f3e3e8ccf1c5760f08ef322fac9c5da503b2a9c2c9c52f4d464e8&=&format=webp&quality=lossless)
+![image](https://media.discordapp.net/attachments/340977957960941578/1439835038823874560/image.png?ex=691c9f20&is=691b4da0&hm=56cb5b36c21f3e3e8ccf1c5760f08ef322fac9c5da503b2a9c2c9c52f4d464e8&=&format=webp&quality=lossless)
 
 ###Key Points
 
